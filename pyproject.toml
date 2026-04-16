@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "drift-lens"
+name = "drift-lense"
 version = "0.1.0"
 description = "Your metrics lie. Your embeddings don't. Detect embedding space drift before accuracy drops."
 readme = "README.md"
@@ -42,12 +42,15 @@ torch = ["torch>=2.0"]
 dev = ["pytest>=7.0", "pytest-cov>=4.0"]
 
 [project.urls]
-Homepage = "https://github.com/PRAFULREDDYM/drift-lens"
-Repository = "https://github.com/PRAFULREDDYM/drift-lens"
-Issues = "https://github.com/PRAFULREDDYM/drift-lens/issues"
+Homepage = "https://github.com/PRAFULREDDYM/Drift_lens"
+Repository = "https://github.com/PRAFULREDDYM/Drift_lens"
+Issues = "https://github.com/PRAFULREDDYM/Drift_lens/issues"
 
 [project.scripts]
 drift-lens = "drift_lens.cli:cli"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["drift_lens"]

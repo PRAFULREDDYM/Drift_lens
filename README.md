@@ -2,17 +2,17 @@
   <img src="assets/demo.gif" alt="drift-lens demo" width="800">
 </p>
 
-<h1 align="center">drift-lens</h1>
+<h1 align="center">drift-lense</h1>
 
 <p align="center">
   <strong>Your metrics lie. Your embeddings don't.</strong>
 </p>
 
 <p align="center">
-  <a href="https://pypi.org/project/drift-lens/"><img src="https://img.shields.io/pypi/v/drift-lens?color=%23FF9800&label=PyPI" alt="PyPI"></a>
-  <a href="https://pypi.org/project/drift-lens/"><img src="https://img.shields.io/pypi/pyversions/drift-lens" alt="Python"></a>
-  <a href="https://github.com/PRAFULREDDYM/drift-lens/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License"></a>
-  <a href="https://github.com/PRAFULREDDYM/drift-lens/stargazers"><img src="https://img.shields.io/github/stars/PRAFULREDDYM/drift-lens?style=social" alt="Stars"></a>
+  <a href="https://pypi.org/project/drift-lense/"><img src="https://img.shields.io/pypi/v/drift-lense?color=%23FF9800&label=PyPI" alt="PyPI"></a>
+  <a href="https://pypi.org/project/drift-lense/"><img src="https://img.shields.io/pypi/pyversions/drift-lense" alt="Python"></a>
+  <a href="https://github.com/PRAFULREDDYM/Drift_lens/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License"></a>
+  <a href="https://github.com/PRAFULREDDYM/Drift_lens/stargazers"><img src="https://img.shields.io/github/stars/PRAFULREDDYM/Drift_lens?style=social" alt="Stars"></a>
 </p>
 
 <p align="center">
@@ -31,12 +31,12 @@
 
 Your model's accuracy looks fine — until it doesn't. By the time precision drops, your embeddings have been silently drifting for **days**. Traditional monitoring watches the wrong signals: accuracy, loss, and latency are **lagging indicators**. The embedding space is the **leading indicator**, and nobody's watching it.
 
-**drift-lens** detects embedding space drift **days before your accuracy drops** — with zero infra changes.
+**drift-lense** detects embedding space drift **days before your accuracy drops** — with zero infra changes.
 
 ## Install
 
 ```bash
-pip install drift-lens
+pip install drift-lense
 ```
 
 ## Quick Start
@@ -295,8 +295,8 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for the full gu
 
 ```bash
 # Fork & clone
-git clone https://github.com/YOUR_USERNAME/drift-lens.git
-cd drift-lens
+git clone https://github.com/YOUR_USERNAME/Drift_lens.git
+cd Drift_lens
 
 # Install in dev mode
 pip install -e ".[dev]"

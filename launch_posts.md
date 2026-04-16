@@ -1,4 +1,4 @@
-# drift-lens Launch Posts
+# drift-lense Launch Posts
 
 Post in this order, **24 hours apart**.
 
@@ -16,15 +16,15 @@ Hey r/ML,
 
 I kept running into the same problem: model accuracy looks fine for days, then suddenly craters. By the time precision drops, the embedding space has already shifted. Accuracy is a lagging indicator — embeddings are the leading one.
 
-So I built **drift-lens** — an open-source Python tool that detects embedding space drift *before* your metrics degrade.
+So I built **drift-lense** — an open-source Python tool that detects embedding space drift *before* your metrics degrade.
 
 **What makes it different from Evidently/Arize:**
 - **Topological drift detection** via persistent homology (Ripser). This catches cluster merges, splits, and structural collapse that statistical tests completely miss.
 - **Three detection methods**: Fréchet Embedding Distance (like FID but for arbitrary embeddings), kernel MMD with permutation p-values, and the topology detector.
-- **Zero infrastructure**: `pip install drift-lens` → 5 lines of code → done. No cloud, no API keys, no YAML. Snapshots are flat parquet files.
+- **Zero infrastructure**: `pip install drift-lense` → 5 lines of code → done. No cloud, no API keys, no YAML. Snapshots are flat parquet files.
 
 **The demo that sold me on building this:**
-The dashboard shows a synthetic 14-day scenario where drift-lens fires an alert on Day 8. Accuracy doesn't drop until Day 12. That's a **4-day early warning** from 5 lines of code.
+The dashboard shows a synthetic 14-day scenario where drift-lense fires an alert on Day 8. Accuracy doesn't drop until Day 12. That's a **4-day early warning** from 5 lines of code.
 
 [Demo GIF]
 
@@ -40,8 +40,8 @@ result = detector.compare(baseline, current)
 print(f"Drift: {result.drift_score:.3f} | Alert: {result.is_drift}")
 ```
 
-GitHub: https://github.com/PRAFULREDDYM/drift-lens
-PyPI: `pip install drift-lens`
+GitHub: https://github.com/PRAFULREDDYM/Drift_lens
+PyPI: `pip install drift-lense`
 
 Happy to answer questions about the math, the topology approach, or why I think embedding monitoring is criminally underserved.
 
@@ -49,22 +49,22 @@ Happy to answer questions about the math, the topology approach, or why I think 
 
 ## 2. Hacker News (Day 2)
 
-**Title:** Show HN: drift-lens – detect embedding space drift before your metrics do
+**Title:** Show HN: drift-lense – detect embedding space drift before your metrics do
 
-**URL:** https://github.com/PRAFULREDDYM/drift-lens
+**URL:** https://github.com/PRAFULREDDYM/Drift_lens
 
 **Comment (post immediately after submission):**
 
 Hi HN,
 
-drift-lens is an open-source Python tool for detecting drift in embedding spaces. The core idea: if you monitor your model's embeddings directly, you can catch distribution shifts days before downstream accuracy degrades.
+drift-lense is an open-source Python tool for detecting drift in embedding spaces. The core idea: if you monitor your model's embeddings directly, you can catch distribution shifts days before downstream accuracy degrades.
 
 Three detection methods:
 1. Fréchet Embedding Distance — same math as FID, applied to arbitrary embeddings
 2. Maximum Mean Discrepancy — kernel-based, non-parametric, with permutation p-values
 3. Persistent homology — computes topological features (connected components, loops) via Vietoris-Rips filtration and compares them with Wasserstein distance. This is the unusual one — it detects structural changes like cluster merges that FED/MMD miss.
 
-Install: `pip install drift-lens`
+Install: `pip install drift-lense`
 
 No cloud, no API keys, no infrastructure. Snapshots are just parquet files. Ships with a Streamlit dashboard for visual exploration.
 
@@ -74,18 +74,18 @@ The synthetic demo shows it catching drift 4 days before accuracy drops.
 
 ## 3. r/LocalLLaMA (Day 3)
 
-**Title:** drift-lens — open-source tool to monitor your local embedding model in production
+**Title:** drift-lense — open-source tool to monitor your local embedding model in production
 
 **Body:**
 
 If you're running a local embedding model (sentence-transformers, Nomic, etc.) in production, how do you know when the distribution of your embeddings has shifted?
 
-I built **drift-lens** to solve this. It monitors the embedding space itself — not accuracy, not loss — and fires an alert when the statistical or topological structure changes.
+I built **drift-lense** to solve this. It monitors the embedding space itself — not accuracy, not loss — and fires an alert when the statistical or topological structure changes.
 
 **Why this matters for local models:**
-- You swap from `all-MiniLM-L6-v2` to `nomic-embed-text` → drift-lens quantifies exactly how different the spaces are
-- Your input data distribution shifts over time → drift-lens catches it before your RAG pipeline starts returning garbage
-- You fine-tune your model → drift-lens tells you if the new embeddings have collapsed or diverged
+- You swap from `all-MiniLM-L6-v2` to `nomic-embed-text` → drift-lense quantifies exactly how different the spaces are
+- Your input data distribution shifts over time → drift-lense catches it before your RAG pipeline starts returning garbage
+- You fine-tune your model → drift-lense tells you if the new embeddings have collapsed or diverged
 
 **Usage:**
 ```python
@@ -98,9 +98,9 @@ detector = DriftDetector(method="topology")  # catches structural changes
 result = detector.compare(baseline, current)
 ```
 
-Runs entirely local. No API keys, no cloud. Just `pip install drift-lens`.
+Runs entirely local. No API keys, no cloud. Just `pip install drift-lense`.
 
-GitHub: https://github.com/PRAFULREDDYM/drift-lens
+GitHub: https://github.com/PRAFULREDDYM/Drift_lens
 
 ---
 
@@ -116,7 +116,7 @@ Your model's accuracy looks fine.
 
 But the embedding space has been drifting for 4 days.
 
-I built drift-lens: open-source embedding drift detection that fires BEFORE your metrics drop.
+I built drift-lense: open-source embedding drift detection that fires BEFORE your metrics drop.
 
 [ATTACH DEMO GIF]
 
@@ -130,7 +130,7 @@ The problem: accuracy, precision, recall — they're all LAGGING indicators.
 
 By the time they drop, your embeddings shifted days ago.
 
-drift-lens watches the leading indicator: the embedding space itself.
+drift-lense watches the leading indicator: the embedding space itself.
 
 3 detection methods. 5 lines of code. Zero API keys.
 
@@ -158,7 +158,7 @@ result = detector.compare(baseline, current)
 # result.drift_score → 0.0 to 1.0
 ```
 
-Install: pip install drift-lens
+Install: pip install drift-lense
 No cloud. No YAML. Just parquet files.
 
 ---
@@ -167,7 +167,7 @@ No cloud. No YAML. Just parquet files.
 
 If you're running embeddings in production — RAG, search, recommendations, classification — you should be monitoring the embedding space directly.
 
-⭐ GitHub: https://github.com/PRAFULREDDYM/drift-lens
+⭐ GitHub: https://github.com/PRAFULREDDYM/Drift_lens
 
 Built as an open-source tool for the MLOps community.
 
@@ -180,7 +180,7 @@ Tag someone who's been bitten by silent drift 👇
 ## Posting Checklist
 
 - [ ] Ensure demo GIF is pushed to repo (`assets/demo.gif`)
-- [ ] Verify `pip install drift-lens` works from PyPI
+- [ ] Verify `pip install drift-lense` works from PyPI
 - [ ] Day 1: Post to r/MachineLearning
 - [ ] Day 2: Post to Hacker News
 - [ ] Day 3: Post to r/LocalLLaMA
