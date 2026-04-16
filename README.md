@@ -2,15 +2,15 @@
   <img src="assets/demo.gif" alt="drift-lens demo" width="800">
 </p>
 
-<h1 align="center">drift-lense</h1>
+<h1 align="center">drift-lens-monitor</h1>
 
 <p align="center">
   <strong>Your metrics lie. Your embeddings don't.</strong>
 </p>
 
 <p align="center">
-  <a href="https://pypi.org/project/drift-lense/"><img src="https://img.shields.io/pypi/v/drift-lense?color=%23FF9800&label=PyPI" alt="PyPI"></a>
-  <a href="https://pypi.org/project/drift-lense/"><img src="https://img.shields.io/pypi/pyversions/drift-lense" alt="Python"></a>
+  <a href="https://pypi.org/project/drift-lens-monitor/"><img src="https://img.shields.io/pypi/v/drift-lens-monitor?color=%23FF9800&label=PyPI" alt="PyPI"></a>
+  <a href="https://pypi.org/project/drift-lens-monitor/"><img src="https://img.shields.io/pypi/pyversions/drift-lens-monitor" alt="Python"></a>
   <a href="https://github.com/PRAFULREDDYM/Drift_lens/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License"></a>
   <a href="https://github.com/PRAFULREDDYM/Drift_lens/stargazers"><img src="https://img.shields.io/github/stars/PRAFULREDDYM/Drift_lens?style=social" alt="Stars"></a>
 </p>
@@ -31,12 +31,12 @@
 
 Your model's accuracy looks fine — until it doesn't. By the time precision drops, your embeddings have been silently drifting for **days**. Traditional monitoring watches the wrong signals: accuracy, loss, and latency are **lagging indicators**. The embedding space is the **leading indicator**, and nobody's watching it.
 
-**drift-lense** detects embedding space drift **days before your accuracy drops** — with zero infra changes.
+**drift-lens-monitor** detects embedding space drift **days before your accuracy drops** — with zero infra changes.
 
 ## Install
 
 ```bash
-pip install drift-lense
+pip install drift-lens-monitor
 ```
 
 ## Quick Start

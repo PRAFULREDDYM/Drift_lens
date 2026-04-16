@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "drift-lense"
+name = "drift-lens-monitor"
 version = "0.1.0"
 description = "Your metrics lie. Your embeddings don't. Detect embedding space drift before accuracy drops."
 readme = "README.md"
